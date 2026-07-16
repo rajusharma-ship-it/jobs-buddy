@@ -1,0 +1,27 @@
+{
+  "name": "jobs-buddy",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --parallel --filter @jobs-buddy/dashboard --filter @jobs-buddy/worker dev",
+    "start": "pnpm --parallel --filter @jobs-buddy/dashboard --filter @jobs-buddy/worker start",
+    "dev:dashboard": "pnpm --filter @jobs-buddy/dashboard dev",
+    "dev:worker": "pnpm --filter @jobs-buddy/worker dev",
+    "setup": "tsx scripts/setup.ts",
+    "reset:roles": "pnpm --filter @jobs-buddy/db exec tsx src/reset-roles.ts",
+    "update:skills": "pnpm --filter @jobs-buddy/db exec tsx src/update-skills.ts",
+    "login:indeed": "tsx scripts/indeed-login.ts",
+    "test:crawl": "tsx scripts/test-crawl.ts",
+    "db:migrate": "pnpm --filter @jobs-buddy/db migrate",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

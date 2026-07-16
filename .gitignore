@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.next/
+.turbo/
+*.db
+*.db-journal
+.env
+.env.local
+data/
+output/
+screenshots/
+sessions/
+*.log
+.DS_Store

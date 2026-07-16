@@ -1,0 +1,33 @@
+{
+  "name": "@jobs-buddy/crawler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@jobs-buddy/browser": "workspace:*",
+    "@jobs-buddy/utils": "workspace:*",
+    "@jobs-buddy/playwright-linkedin": "workspace:*",
+    "@jobs-buddy/playwright-indeed": "workspace:*",
+    "@jobs-buddy/playwright-greenhouse": "workspace:*",
+    "@jobs-buddy/playwright-lever": "workspace:*",
+    "@jobs-buddy/playwright-ashby": "workspace:*",
+    "@jobs-buddy/playwright-workable": "workspace:*",
+    "@jobs-buddy/playwright-smartrecruiters": "workspace:*",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
